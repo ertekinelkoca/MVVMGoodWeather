@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74DAC4F4257BA073001B7532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DAC4F3257BA073001B7532 /* AppDelegate.swift */; };
+		74DAC4F6257BA073001B7532 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DAC4F5257BA073001B7532 /* SceneDelegate.swift */; };
+		74DAC4F8257BA073001B7532 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DAC4F7257BA073001B7532 /* ViewController.swift */; };
+		74DAC4FB257BA073001B7532 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DAC4F9257BA073001B7532 /* Main.storyboard */; };
+		74DAC4FD257BA074001B7532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74DAC4FC257BA074001B7532 /* Assets.xcassets */; };
+		74DAC500257BA074001B7532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DAC4FE257BA074001B7532 /* LaunchScreen.storyboard */; };
+		74DAC50B257BA074001B7532 /* MVVMGoodWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DAC50A257BA074001B7532 /* MVVMGoodWeatherTests.swift */; };
+		74DAC516257BA074001B7532 /* MVVMGoodWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DAC515257BA074001B7532 /* MVVMGoodWeatherUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74DAC507257BA074001B7532 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74DAC4E8257BA073001B7532 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74DAC4EF257BA073001B7532;
+			remoteInfo = MVVMGoodWeather;
+		};
+		74DAC512257BA074001B7532 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74DAC4E8257BA073001B7532 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74DAC4EF257BA073001B7532;
+			remoteInfo = MVVMGoodWeather;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74DAC4F0257BA073001B7532 /* MVVMGoodWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMGoodWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74DAC4F3257BA073001B7532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		74DAC4F5257BA073001B7532 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		74DAC4F7257BA073001B7532 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74DAC4FA257BA073001B7532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		74DAC4FC257BA074001B7532 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74DAC4FF257BA074001B7532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		74DAC501257BA074001B7532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74DAC506257BA074001B7532 /* MVVMGoodWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMGoodWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74DAC50A257BA074001B7532 /* MVVMGoodWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMGoodWeatherTests.swift; sourceTree = "<group>"; };
+		74DAC50C257BA074001B7532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74DAC511257BA074001B7532 /* MVVMGoodWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMGoodWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74DAC515257BA074001B7532 /* MVVMGoodWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMGoodWeatherUITests.swift; sourceTree = "<group>"; };
+		74DAC517257BA074001B7532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74DAC4ED257BA073001B7532 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DAC503257BA074001B7532 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DAC50E257BA074001B7532 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74DAC4E7257BA073001B7532 = {
+			isa = PBXGroup;
+			children = (
+				74DAC4F2257BA073001B7532 /* MVVMGoodWeather */,
+				74DAC509257BA074001B7532 /* MVVMGoodWeatherTests */,
+				74DAC514257BA074001B7532 /* MVVMGoodWeatherUITests */,
+				74DAC4F1257BA073001B7532 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74DAC4F1257BA073001B7532 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74DAC4F0257BA073001B7532 /* MVVMGoodWeather.app */,
+				74DAC506257BA074001B7532 /* MVVMGoodWeatherTests.xctest */,
+				74DAC511257BA074001B7532 /* MVVMGoodWeatherUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74DAC4F2257BA073001B7532 /* MVVMGoodWeather */ = {
+			isa = PBXGroup;
+			children = (
+				74DAC4F3257BA073001B7532 /* AppDelegate.swift */,
+				74DAC4F5257BA073001B7532 /* SceneDelegate.swift */,
+				74DAC4F7257BA073001B7532 /* ViewController.swift */,
+				74DAC4F9257BA073001B7532 /* Main.storyboard */,
+				74DAC4FC257BA074001B7532 /* Assets.xcassets */,
+				74DAC4FE257BA074001B7532 /* LaunchScreen.storyboard */,
+				74DAC501257BA074001B7532 /* Info.plist */,
+			);
+			path = MVVMGoodWeather;
+			sourceTree = "<group>";
+		};
+		74DAC509257BA074001B7532 /* MVVMGoodWeatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				74DAC50A257BA074001B7532 /* MVVMGoodWeatherTests.swift */,
+				74DAC50C257BA074001B7532 /* Info.plist */,
+			);
+			path = MVVMGoodWeatherTests;
+			sourceTree = "<group>";
+		};
+		74DAC514257BA074001B7532 /* MVVMGoodWeatherUITests */ = {
+			isa = PBXGroup;
+			children = (
+				74DAC515257BA074001B7532 /* MVVMGoodWeatherUITests.swift */,
+				74DAC517257BA074001B7532 /* Info.plist */,
+			);
+			path = MVVMGoodWeatherUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74DAC4EF257BA073001B7532 /* MVVMGoodWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74DAC51A257BA074001B7532 /* Build configuration list for PBXNativeTarget "MVVMGoodWeather" */;
+			buildPhases = (
+				74DAC4EC257BA073001B7532 /* Sources */,
+				74DAC4ED257BA073001B7532 /* Frameworks */,
+				74DAC4EE257BA073001B7532 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MVVMGoodWeather;
+			productName = MVVMGoodWeather;
+			productReference = 74DAC4F0257BA073001B7532 /* MVVMGoodWeather.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74DAC505257BA074001B7532 /* MVVMGoodWeatherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74DAC51D257BA074001B7532 /* Build configuration list for PBXNativeTarget "MVVMGoodWeatherTests" */;
+			buildPhases = (
+				74DAC502257BA074001B7532 /* Sources */,
+				74DAC503257BA074001B7532 /* Frameworks */,
+				74DAC504257BA074001B7532 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74DAC508257BA074001B7532 /* PBXTargetDependency */,
+			);
+			name = MVVMGoodWeatherTests;
+			productName = MVVMGoodWeatherTests;
+			productReference = 74DAC506257BA074001B7532 /* MVVMGoodWeatherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		74DAC510257BA074001B7532 /* MVVMGoodWeatherUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74DAC520257BA074001B7532 /* Build configuration list for PBXNativeTarget "MVVMGoodWeatherUITests" */;
+			buildPhases = (
+				74DAC50D257BA074001B7532 /* Sources */,
+				74DAC50E257BA074001B7532 /* Frameworks */,
+				74DAC50F257BA074001B7532 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74DAC513257BA074001B7532 /* PBXTargetDependency */,
+			);
+			name = MVVMGoodWeatherUITests;
+			productName = MVVMGoodWeatherUITests;
+			productReference = 74DAC511257BA074001B7532 /* MVVMGoodWeatherUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74DAC4E8257BA073001B7532 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					74DAC4EF257BA073001B7532 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					74DAC505257BA074001B7532 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 74DAC4EF257BA073001B7532;
+					};
+					74DAC510257BA074001B7532 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 74DAC4EF257BA073001B7532;
+					};
+				};
+			};
+			buildConfigurationList = 74DAC4EB257BA073001B7532 /* Build configuration list for PBXProject "MVVMGoodWeather" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 74DAC4E7257BA073001B7532;
+			productRefGroup = 74DAC4F1257BA073001B7532 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74DAC4EF257BA073001B7532 /* MVVMGoodWeather */,
+				74DAC505257BA074001B7532 /* MVVMGoodWeatherTests */,
+				74DAC510257BA074001B7532 /* MVVMGoodWeatherUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74DAC4EE257BA073001B7532 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DAC500257BA074001B7532 /* LaunchScreen.storyboard in Resources */,
+				74DAC4FD257BA074001B7532 /* Assets.xcassets in Resources */,
+				74DAC4FB257BA073001B7532 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DAC504257BA074001B7532 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DAC50F257BA074001B7532 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74DAC4EC257BA073001B7532 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DAC4F8257BA073001B7532 /* ViewController.swift in Sources */,
+				74DAC4F4257BA073001B7532 /* AppDelegate.swift in Sources */,
+				74DAC4F6257BA073001B7532 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DAC502257BA074001B7532 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DAC50B257BA074001B7532 /* MVVMGoodWeatherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DAC50D257BA074001B7532 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DAC516257BA074001B7532 /* MVVMGoodWeatherUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74DAC508257BA074001B7532 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74DAC4EF257BA073001B7532 /* MVVMGoodWeather */;
+			targetProxy = 74DAC507257BA074001B7532 /* PBXContainerItemProxy */;
+		};
+		74DAC513257BA074001B7532 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74DAC4EF257BA073001B7532 /* MVVMGoodWeather */;
+			targetProxy = 74DAC512257BA074001B7532 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74DAC4F9257BA073001B7532 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74DAC4FA257BA073001B7532 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		74DAC4FE257BA074001B7532 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74DAC4FF257BA074001B7532 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74DAC518257BA074001B7532 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		74DAC519257BA074001B7532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74DAC51B257BA074001B7532 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A4XW7DX4KH;
+				INFOPLIST_FILE = MVVMGoodWeather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aliertekinelkoca.MVVMGoodWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74DAC51C257BA074001B7532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A4XW7DX4KH;
+				INFOPLIST_FILE = MVVMGoodWeather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aliertekinelkoca.MVVMGoodWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		74DAC51E257BA074001B7532 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A4XW7DX4KH;
+				INFOPLIST_FILE = MVVMGoodWeatherTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aliertekinelkoca.MVVMGoodWeatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVMGoodWeather.app/MVVMGoodWeather";
+			};
+			name = Debug;
+		};
+		74DAC51F257BA074001B7532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A4XW7DX4KH;
+				INFOPLIST_FILE = MVVMGoodWeatherTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aliertekinelkoca.MVVMGoodWeatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVMGoodWeather.app/MVVMGoodWeather";
+			};
+			name = Release;
+		};
+		74DAC521257BA074001B7532 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A4XW7DX4KH;
+				INFOPLIST_FILE = MVVMGoodWeatherUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aliertekinelkoca.MVVMGoodWeatherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MVVMGoodWeather;
+			};
+			name = Debug;
+		};
+		74DAC522257BA074001B7532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A4XW7DX4KH;
+				INFOPLIST_FILE = MVVMGoodWeatherUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aliertekinelkoca.MVVMGoodWeatherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MVVMGoodWeather;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74DAC4EB257BA073001B7532 /* Build configuration list for PBXProject "MVVMGoodWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74DAC518257BA074001B7532 /* Debug */,
+				74DAC519257BA074001B7532 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74DAC51A257BA074001B7532 /* Build configuration list for PBXNativeTarget "MVVMGoodWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74DAC51B257BA074001B7532 /* Debug */,
+				74DAC51C257BA074001B7532 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74DAC51D257BA074001B7532 /* Build configuration list for PBXNativeTarget "MVVMGoodWeatherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74DAC51E257BA074001B7532 /* Debug */,
+				74DAC51F257BA074001B7532 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74DAC520257BA074001B7532 /* Build configuration list for PBXNativeTarget "MVVMGoodWeatherUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74DAC521257BA074001B7532 /* Debug */,
+				74DAC522257BA074001B7532 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74DAC4E8257BA073001B7532 /* Project object */;
+}
