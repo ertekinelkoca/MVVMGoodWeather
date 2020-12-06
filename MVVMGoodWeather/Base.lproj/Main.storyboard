@@ -11,19 +11,43 @@
         <!--GoodWeather-->
         <scene sceneID="NbM-xz-EbZ">
             <objects>
-                <tableViewController id="8cv-1S-c4u" sceneMemberID="viewController">
+                <tableViewController id="8cv-1S-c4u" customClass="WeatherListTableViewController" customModule="MVVMGoodWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="khn-PI-QRG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="iNW-Xg-YJw">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherCell" rowHeight="100" id="iNW-Xg-YJw" customClass="WeatherCell" customModule="MVVMGoodWeather" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iNW-Xg-YJw" id="Lfl-13-bAw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7x-68-cB0">
+                                            <rect key="frame" x="16" y="33" width="52" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gU4-OT-yYb">
+                                            <rect key="frame" x="265" y="33" width="94" height="35"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="gU4-OT-yYb" secondAttribute="trailing" constant="16" id="MvS-e3-gfJ"/>
+                                        <constraint firstItem="gU4-OT-yYb" firstAttribute="top" secondItem="Lfl-13-bAw" secondAttribute="top" constant="33" id="Q3U-gV-Ys3"/>
+                                        <constraint firstItem="f7x-68-cB0" firstAttribute="top" secondItem="Lfl-13-bAw" secondAttribute="top" constant="33" id="rAe-Lm-haQ"/>
+                                        <constraint firstItem="f7x-68-cB0" firstAttribute="leading" secondItem="Lfl-13-bAw" secondAttribute="leading" constant="16" id="zLL-O2-vya"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cityNameLabel" destination="f7x-68-cB0" id="zy3-Of-ieE"/>
+                                    <outlet property="temperatureLabel" destination="gU4-OT-yYb" id="jxT-U0-HGn"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,19 +66,50 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYH-kg-j2H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1024.8" y="90.404797601199405"/>
+            <point key="canvasLocation" x="949.60000000000002" y="89.505247376311857"/>
         </scene>
         <!--Add City-->
         <scene sceneID="LOh-sF-0vh">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Hnv-og-Tzr" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Hnv-og-Tzr" customClass="AddWeatherCityViewController" customModule="MVVMGoodWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kjx-ye-er9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfr-rD-8Rh">
+                                <rect key="frame" x="16" y="78" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeD-c9-hco">
+                                <rect key="frame" x="170" y="144" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveCityButtonPressed" destination="Hnv-og-Tzr" eventType="touchUpInside" id="Bgf-l0-aqY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="w83-gc-cVn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hfr-rD-8Rh" firstAttribute="trailing" secondItem="Kjx-ye-er9" secondAttribute="trailingMargin" id="8Et-JF-ZYw"/>
+                            <constraint firstItem="Hfr-rD-8Rh" firstAttribute="top" secondItem="w83-gc-cVn" secondAttribute="top" constant="34" id="MFa-NI-skI"/>
+                            <constraint firstItem="Hfr-rD-8Rh" firstAttribute="centerX" secondItem="EeD-c9-hco" secondAttribute="centerX" id="OcJ-Br-TY4"/>
+                            <constraint firstItem="EeD-c9-hco" firstAttribute="top" secondItem="Hfr-rD-8Rh" secondAttribute="bottom" constant="32" id="Wb1-lc-hFC"/>
+                            <constraint firstItem="EeD-c9-hco" firstAttribute="leading" secondItem="w83-gc-cVn" secondAttribute="leading" constant="170" id="rBw-IM-ZiQ"/>
+                            <constraint firstItem="Hfr-rD-8Rh" firstAttribute="leading" secondItem="Kjx-ye-er9" secondAttribute="leadingMargin" id="yvl-Lf-AyC"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add City" id="e9A-Pr-x8d"/>
+                    <navigationItem key="navigationItem" title="Add City" id="e9A-Pr-x8d">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="Nni-aL-4Rx">
+                            <connections>
+                                <action selector="close" destination="Hnv-og-Tzr" id="K8R-TD-OUw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="Hfr-rD-8Rh" id="X40-kR-TBi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4i-ZI-RA2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
