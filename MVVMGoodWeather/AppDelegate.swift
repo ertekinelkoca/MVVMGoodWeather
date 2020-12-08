@@ -19,7 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         UIBarButtonItem.appearance().tintColor = UIColor.white
     
+        setupDefaultSettings()
+        
         return true
+    }
+    
+    private func setupDefaultSettings() {
+        
+        let userDefaults = UserDefaults.standard
+        if userDefaults.value(forKey: "unit") == nil {
+            userDefaults.setValue(Unit.celsius.rawValue, forKey: "unit")
+        }
     }
 
     // MARK: UISceneSession Lifecycle
