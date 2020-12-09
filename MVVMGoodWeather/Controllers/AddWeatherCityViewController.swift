@@ -37,16 +37,14 @@ class AddWeatherCityViewController: UIViewController {
                 if let weatherVM = result {
                     
                     if let delegate = self?.delegate{
+                        print("save clicked")
                         delegate.addWeatherDidSave(vm: weatherVM)
+                        
                         self?.dismiss(animated: true, completion: nil)
                     }
-                    
                 }
-                
             }
-             
         }
-        
     }
     
     @IBAction func close() {
