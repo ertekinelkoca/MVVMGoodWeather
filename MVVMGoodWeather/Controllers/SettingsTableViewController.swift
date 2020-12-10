@@ -19,13 +19,10 @@ class SettingsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        
     }
     
     @IBAction func done() {
-        
         if let delegate = self.delegate {
             delegate.settingsDone(vm: self.settingsViewModel)
         }
@@ -33,11 +30,8 @@ class SettingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.visibleCells.forEach { cell in
-            
             cell.accessoryType = .none
-            
         }
         
         if let cell = tableView.cellForRow(at: indexPath) {
@@ -45,8 +39,8 @@ class SettingsTableViewController: UITableViewController {
             let unit = Unit.allCases[indexPath.row]
             self.settingsViewModel.selectedUnit = unit
         }
-        
     }
+    
     /*
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
@@ -65,21 +59,13 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let settingsItem = self.settingsViewModel.units[indexPath.row]
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath)
-        
         cell.textLabel?.text = settingsItem.displayName
         
         if settingsItem == self.settingsViewModel.selectedUnit {
-            
             cell.accessoryType = .checkmark
-            
         }
-        
         return cell
     }
-    
-    
-    
-    
+  
 }

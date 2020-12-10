@@ -115,28 +115,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfr-rD-8Rh">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfr-rD-8Rh" customClass="BindingTextField" customModule="MVVMGoodWeather" customModuleProvider="target">
                                 <rect key="frame" x="16" y="78" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hOO-xT-Mnd" customClass="BindingTextField" customModule="MVVMGoodWeather" customModuleProvider="target">
+                                <rect key="frame" x="16" y="128" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeD-c9-hco">
-                                <rect key="frame" x="170" y="144" width="34" height="30"/>
+                                <rect key="frame" x="170" y="231" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="ujj-AI-yHD"/>
+                                </constraints>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveCityButtonPressed" destination="Hnv-og-Tzr" eventType="touchUpInside" id="Bgf-l0-aqY"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLu-Y5-Cay" customClass="BindingTextField" customModule="MVVMGoodWeather" customModuleProvider="target">
+                                <rect key="frame" x="16" y="178" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w83-gc-cVn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Hfr-rD-8Rh" firstAttribute="trailing" secondItem="Kjx-ye-er9" secondAttribute="trailingMargin" id="8Et-JF-ZYw"/>
-                            <constraint firstItem="Hfr-rD-8Rh" firstAttribute="top" secondItem="w83-gc-cVn" secondAttribute="top" constant="34" id="MFa-NI-skI"/>
-                            <constraint firstItem="Hfr-rD-8Rh" firstAttribute="centerX" secondItem="EeD-c9-hco" secondAttribute="centerX" id="OcJ-Br-TY4"/>
-                            <constraint firstItem="EeD-c9-hco" firstAttribute="top" secondItem="Hfr-rD-8Rh" secondAttribute="bottom" constant="32" id="Wb1-lc-hFC"/>
-                            <constraint firstItem="EeD-c9-hco" firstAttribute="leading" secondItem="w83-gc-cVn" secondAttribute="leading" constant="170" id="rBw-IM-ZiQ"/>
-                            <constraint firstItem="Hfr-rD-8Rh" firstAttribute="leading" secondItem="Kjx-ye-er9" secondAttribute="leadingMargin" id="yvl-Lf-AyC"/>
+                            <constraint firstItem="hOO-xT-Mnd" firstAttribute="top" secondItem="Hfr-rD-8Rh" secondAttribute="bottom" constant="16" id="15u-yT-5pg"/>
+                            <constraint firstItem="Hfr-rD-8Rh" firstAttribute="trailing" secondItem="hOO-xT-Mnd" secondAttribute="trailing" id="1Kz-xf-hgb"/>
+                            <constraint firstItem="EeD-c9-hco" firstAttribute="leading" secondItem="w83-gc-cVn" secondAttribute="leading" constant="170" id="72D-3j-AgE"/>
+                            <constraint firstItem="hOO-xT-Mnd" firstAttribute="leading" secondItem="SLu-Y5-Cay" secondAttribute="leading" id="CLx-yb-uqK"/>
+                            <constraint firstItem="Hfr-rD-8Rh" firstAttribute="leading" secondItem="Kjx-ye-er9" secondAttribute="leadingMargin" id="Dd2-Na-enT"/>
+                            <constraint firstItem="Hfr-rD-8Rh" firstAttribute="trailing" secondItem="Kjx-ye-er9" secondAttribute="trailingMargin" id="PcG-TI-yaL"/>
+                            <constraint firstItem="hOO-xT-Mnd" firstAttribute="trailing" secondItem="SLu-Y5-Cay" secondAttribute="trailing" id="PnT-m6-0ML"/>
+                            <constraint firstItem="SLu-Y5-Cay" firstAttribute="centerX" secondItem="EeD-c9-hco" secondAttribute="centerX" id="RPD-md-eua"/>
+                            <constraint firstItem="EeD-c9-hco" firstAttribute="top" secondItem="SLu-Y5-Cay" secondAttribute="bottom" constant="19" id="ZH4-Ez-3Hy"/>
+                            <constraint firstItem="Hfr-rD-8Rh" firstAttribute="leading" secondItem="hOO-xT-Mnd" secondAttribute="leading" id="dit-xA-8IV"/>
+                            <constraint firstItem="SLu-Y5-Cay" firstAttribute="top" secondItem="hOO-xT-Mnd" secondAttribute="bottom" constant="16" id="hK7-Ew-v7G"/>
+                            <constraint firstItem="Hfr-rD-8Rh" firstAttribute="top" secondItem="w83-gc-cVn" secondAttribute="top" constant="34" id="hzu-TV-u2P"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add City" id="e9A-Pr-x8d">
@@ -148,11 +167,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cityNameTextField" destination="Hfr-rD-8Rh" id="X40-kR-TBi"/>
+                        <outlet property="stateTextField" destination="hOO-xT-Mnd" id="ZzY-Tv-Ta9"/>
+                        <outlet property="zipCodeTextField" destination="SLu-Y5-Cay" id="Fl6-u5-UYP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4i-ZI-RA2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2825" y="90"/>
+            <point key="canvasLocation" x="2824.8000000000002" y="89.505247376311857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W7V-Me-6qr">

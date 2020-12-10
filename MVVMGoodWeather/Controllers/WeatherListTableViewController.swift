@@ -74,11 +74,8 @@ class WeatherListTableViewController: UITableViewController , AddWeatherDelegate
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as! WeatherCell
-        
         let weatherVM = self.weatherListViewModel.modelAt(index: indexPath.row)
-        
         cell.configure(vm: weatherVM)
-        
         return cell
         
     }
