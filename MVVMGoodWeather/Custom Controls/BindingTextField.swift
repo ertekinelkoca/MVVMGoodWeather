@@ -29,12 +29,12 @@ class BindingTextField : UITextField {
     }
     
     private func commonInit() {
-        self.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        self.addTarget(self, action: #selector(textFieldChange), for: .editingChanged)
     }
     
-    @objc func textFieldDidChange(textFieldChange : UITextField) {
+    @objc func textFieldChange(textField : UITextField) {
         
-        if let text = textFieldChange.text {
+        if let text = textField.text {
             self.textChangeClosure(text)
         }
     }

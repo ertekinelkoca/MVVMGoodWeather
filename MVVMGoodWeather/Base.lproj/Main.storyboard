@@ -82,6 +82,7 @@
                                 <connections>
                                     <outlet property="cityNameLabel" destination="f7x-68-cB0" id="zy3-Of-ieE"/>
                                     <outlet property="temperatureLabel" destination="gU4-OT-yYb" id="jxT-U0-HGn"/>
+                                    <segue destination="Ct8-hg-o7M" kind="show" identifier="WeatherDetailsViewController" id="GYB-HR-mBm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -167,8 +168,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cityNameTextField" destination="Hfr-rD-8Rh" id="X40-kR-TBi"/>
-                        <outlet property="stateTextField" destination="hOO-xT-Mnd" id="ZzY-Tv-Ta9"/>
-                        <outlet property="zipCodeTextField" destination="SLu-Y5-Cay" id="Fl6-u5-UYP"/>
+                        <outlet property="stateTextField" destination="hOO-xT-Mnd" id="oeL-iL-t1O"/>
+                        <outlet property="zipCodeTextField" destination="SLu-Y5-Cay" id="9Zd-dp-atF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4i-ZI-RA2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -210,6 +211,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQo-BL-tjK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1889" y="90"/>
+        </scene>
+        <!--Weather Details View Controller-->
+        <scene sceneID="AcC-7h-GOJ">
+            <objects>
+                <viewController id="Ct8-hg-o7M" customClass="WeatherDetailsViewController" customModule="MVVMGoodWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SfX-LO-5kn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xd2-xj-hzK">
+                                <rect key="frame" x="166" y="100" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwF-gA-vru">
+                                <rect key="frame" x="167" y="146" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFc-pv-8fu">
+                                <rect key="frame" x="166" y="229" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cl2-sD-R1v">
+                                <rect key="frame" x="166" y="186" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fyu-dW-FP6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xd2-xj-hzK" firstAttribute="top" secondItem="fyu-dW-FP6" secondAttribute="top" constant="56" id="7Ya-8U-CMg"/>
+                            <constraint firstItem="yFc-pv-8fu" firstAttribute="top" secondItem="Cl2-sD-R1v" secondAttribute="bottom" constant="22" id="813-xQ-C8Q"/>
+                            <constraint firstItem="AwF-gA-vru" firstAttribute="top" secondItem="xd2-xj-hzK" secondAttribute="bottom" constant="25" id="Di8-Ye-nsq"/>
+                            <constraint firstItem="Cl2-sD-R1v" firstAttribute="trailing" secondItem="yFc-pv-8fu" secondAttribute="trailing" id="VQU-85-rA6"/>
+                            <constraint firstItem="xd2-xj-hzK" firstAttribute="trailing" secondItem="Cl2-sD-R1v" secondAttribute="trailing" id="d7U-Qk-DRh"/>
+                            <constraint firstItem="AwF-gA-vru" firstAttribute="leading" secondItem="fyu-dW-FP6" secondAttribute="leading" constant="167" id="dcr-BT-I67"/>
+                            <constraint firstItem="xd2-xj-hzK" firstAttribute="leading" secondItem="Cl2-sD-R1v" secondAttribute="leading" id="ds1-Lu-3GG"/>
+                            <constraint firstItem="xd2-xj-hzK" firstAttribute="centerX" secondItem="SfX-LO-5kn" secondAttribute="centerX" id="hPu-lV-Ur6"/>
+                            <constraint firstItem="AwF-gA-vru" firstAttribute="centerX" secondItem="SfX-LO-5kn" secondAttribute="centerX" id="iNw-QX-cHJ"/>
+                            <constraint firstItem="xd2-xj-hzK" firstAttribute="leading" secondItem="fyu-dW-FP6" secondAttribute="leading" constant="166" id="j5Y-AD-KVD"/>
+                            <constraint firstItem="Cl2-sD-R1v" firstAttribute="top" secondItem="AwF-gA-vru" secondAttribute="bottom" constant="19" id="qfS-Ng-qBW"/>
+                            <constraint firstItem="Cl2-sD-R1v" firstAttribute="leading" secondItem="yFc-pv-8fu" secondAttribute="leading" id="vJ6-km-h5e"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ndl-f2-9nH"/>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="xd2-xj-hzK" id="aXK-Y0-RHb"/>
+                        <outlet property="currentTemperatureLabel" destination="AwF-gA-vru" id="URG-aO-YMN"/>
+                        <outlet property="maxTempLabel" destination="Cl2-sD-R1v" id="I4o-PX-mPZ"/>
+                        <outlet property="minTempLabel" destination="yFc-pv-8fu" id="tau-zJ-c5E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Nj-5S-Uyh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889" y="829"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="d86-3a-LJZ">

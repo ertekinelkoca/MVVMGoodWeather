@@ -27,9 +27,9 @@ struct WeatherListViewModel {
     mutating private func toCelcius() {
         
         weatherViewModels = weatherViewModels.map { vm in
-            var weatherModel = vm
-            weatherModel.currentTemperature.temperature =
-                    (weatherModel.currentTemperature.temperature - 32) * 5/9
+            let weatherModel = vm
+            weatherModel.currentTemperature.temperature.value =
+                (weatherModel.currentTemperature.temperature.value - 32) * 5/9
             return weatherModel
         }
         
@@ -37,9 +37,9 @@ struct WeatherListViewModel {
     
     mutating private func toFahrenheit() {
         weatherViewModels = weatherViewModels.map { vm in
-            var weatherModel = vm
-            weatherModel.currentTemperature.temperature =
-                    (weatherModel.currentTemperature.temperature * 9/5 ) + 32
+            let weatherModel = vm
+            weatherModel.currentTemperature.temperature.value =
+                (weatherModel.currentTemperature.temperature.value * 9/5 ) + 32
             return weatherModel    }
     
     }
@@ -53,12 +53,43 @@ struct WeatherListViewModel {
             toFahrenheit()
             }
         }
+    
+}
+
+//Type Eraser
+class Dynamic <T>: Decodable where T: Decodable {
+    
+    typealias Listener = (T) -> () // Type T returns nothing , this just a closure If dynamic string listener will be string
+    var listener: Listener? // -> T and create variable using dynamic type so is typealias
+    
+    // To save actual value of the name below
+    // To pass the type
+    var value: T {
+        didSet{
+            listener?(value)
+        }
     }
+    
+    func bind(listener: @escaping Listener) {
+        self.listener = listener
+        self.listener?(self.value)
+    }
+    
+    init(value : T) {
+        self.value = value
+    }
+    
+    //to conform decodable protocol which one is going to be decodable
+    private enum CodingKeys: CodingKey {
+        case value
+    }
+}
+
 
     
 struct WeatherViewModel : Decodable {
     
-    let name: String
+    let name: Dynamic<String>
     var currentTemperature: TemperatureViewModel
     
     private enum CodingKeys : String , CodingKey {
@@ -70,9 +101,9 @@ struct WeatherViewModel : Decodable {
 
 struct TemperatureViewModel : Decodable {
     
-    var temperature : Double
-    let temperatureMin : Double
-    let temperatureMax : Double
+    var temperature : Dynamic<Double>
+    let temperatureMin : Dynamic<Double>
+    let temperatureMax : Dynamic<Double>
     
     private enum CodingKeys : String , CodingKey {
         

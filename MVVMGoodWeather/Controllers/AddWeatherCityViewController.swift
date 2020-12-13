@@ -34,7 +34,7 @@ class AddWeatherCityViewController: UIViewController {
     
     @IBOutlet weak var zipCodeTextField : BindingTextField! {
         didSet {
-            cityNameTextField.bind {
+            zipCodeTextField.bind {
                 self.addCityViewModel.zipCode = $0
             }
         }
@@ -44,13 +44,11 @@ class AddWeatherCityViewController: UIViewController {
     var delegate : AddWeatherDelegate?
     
     @IBAction func saveCityButtonPressed() {
-     
-        print(self.addCityViewModel)
         
-        if let city = zipCodeTextField.text {
+        if let city = cityNameTextField.text {
             
             let weatherURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=02ad8dd66fd8ee617c9bdac5c786989f&units=imperial")!
-            
+           
             let weatherResource = Resource<WeatherViewModel>(url: weatherURL) { data in
                 
             let weatherVM = try? JSONDecoder().decode(WeatherViewModel.self, from: data)
@@ -62,7 +60,7 @@ class AddWeatherCityViewController: UIViewController {
                  
                 if let weatherVM = result {
                     
-                    if let delegate = self?.delegate{
+                    if let delegate = self?.delegate {
                         
                         delegate.addWeatherDidSave(vm: weatherVM)
                         
