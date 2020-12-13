@@ -92,6 +92,14 @@ struct WeatherViewModel : Decodable {
     let name: Dynamic<String>
     var currentTemperature: TemperatureViewModel
     
+    init(from decoder: Decoder) throws {
+        
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+    
+        name = Dynamic(value: try container.decode(String.self, forKey: .name))
+        currentTemperature = try container.decode(TemperatureViewModel.self, forKey: .currentTemperature)
+    }
+    
     private enum CodingKeys : String , CodingKey {
         case name
         case currentTemperature = "main"
@@ -104,6 +112,14 @@ struct TemperatureViewModel : Decodable {
     var temperature : Dynamic<Double>
     let temperatureMin : Dynamic<Double>
     let temperatureMax : Dynamic<Double>
+    
+    init(from decoder : Decoder) throws {
+        
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        temperature = Dynamic(value: try container.decode(Double.self, forKey: .temperature))
+        temperatureMin = Dynamic(value: try container.decode(Double.self, forKey: .temperatureMin))
+        temperatureMax = Dynamic(value: try container.decode(Double.self, forKey: .temperatureMax))
+    }
     
     private enum CodingKeys : String , CodingKey {
         

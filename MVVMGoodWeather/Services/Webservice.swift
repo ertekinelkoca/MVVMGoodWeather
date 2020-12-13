@@ -19,7 +19,7 @@ final class Webservice {
     
     func load<T>(resource: Resource<T> , completion: @escaping (T?) -> ()) {
           
-        URLSession.shared.dataTask(with: resource.url) { (data, response, error) in
+      let task =  URLSession.shared.dataTask(with: resource.url) { (data, response, error) in
             
             if let data = data {
                 DispatchQueue.main.async {
@@ -29,8 +29,8 @@ final class Webservice {
                 completion(nil)
             }
             
-        }.resume()
+        }
+        task.resume()
     }
-    
-    
+
 }
