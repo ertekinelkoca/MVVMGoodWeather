@@ -36,7 +36,7 @@ class AddWeatherCityViewController: UIViewController {
         didSet {
             zipCodeTextField.bind {
                 self.addCityViewModel.zipCode = $0
-            }
+            } 
         }
     }
  

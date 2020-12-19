@@ -97,7 +97,7 @@ struct WeatherViewModel : Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
     
         name = Dynamic(value: try container.decode(String.self, forKey: .name))
-        currentTemperature = try container.decode(TemperatureViewModel.self, forKey: .currentTemperature)
+        currentTemperature = try  container.decode(TemperatureViewModel.self, forKey: .currentTemperature)
     }
     
     private enum CodingKeys : String , CodingKey {

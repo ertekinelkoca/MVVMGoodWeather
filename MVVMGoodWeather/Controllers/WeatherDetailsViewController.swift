@@ -20,16 +20,23 @@ class WeatherDetailsViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let weatherViewModel = self.weatherViewModel {
-            
-            self.cityNameLabel.text  = self.weatherViewModel?.name.value
-            self.currentTemperatureLabel.text = self.weatherViewModel?.currentTemperature.temperature.value.formatAsDegree
-            //self.maxTempLabel.text = self.weatherViewModel?.currentTemperature.temperatureMax.formatAsDegree
-            //self.minTempLabel.text = self.weatherViewModel?.currentTemperature.temperatureMin.formatAsDegree
-              
-        } 
-        
+    
+        setupVMBindings()
+    
     }
     
+    private func setupVMBindings() {
+        
+        if let weatherVM = self.weatherViewModel {
+            weatherVM.name.bind { self.cityNameLabel.text = $0}
+            weatherVM.currentTemperature.temperature.bind{ self.currentTemperatureLabel.text = $0.formatAsDegree}
+        } 
+        
+        //change the value after few second , fake changings
+        DispatchQueue.main.asyncAfter (deadline: .now() + 2.0) {
+            self.weatherViewModel?.name.value = "Boston"
+        }
+    }
 }
+    
+

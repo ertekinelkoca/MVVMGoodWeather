@@ -93,7 +93,6 @@ class WeatherListTableViewController: UITableViewController , AddWeatherDelegate
         let weatherVM = self.weatherListViewModel.modelAt(index: indexPath.row)
         cell.configure(vm: weatherVM)
         return cell
-        
     }
 }
 
