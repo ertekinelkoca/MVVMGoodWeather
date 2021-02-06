@@ -30,6 +30,7 @@ class SettingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         tableView.visibleCells.forEach { cell in
             cell.accessoryType = .none
         }
@@ -67,5 +68,4 @@ class SettingsTableViewController: UITableViewController {
         }
         return cell
     }
-  
 }

@@ -10,7 +10,6 @@ import UIKit
 
 class WeatherDetailsViewController : UIViewController {
     
-    
     @IBOutlet weak var cityNameLabel : UILabel!
     @IBOutlet weak var currentTemperatureLabel : UILabel!
     @IBOutlet weak var maxTempLabel : UILabel!
@@ -30,7 +29,10 @@ class WeatherDetailsViewController : UIViewController {
         if let weatherVM = self.weatherViewModel {
             weatherVM.name.bind { self.cityNameLabel.text = $0}
             weatherVM.currentTemperature.temperature.bind{ self.currentTemperatureLabel.text = $0.formatAsDegree}
-        } 
+        }
+        
+        
+        
         
         //change the value after few second , fake changings
         DispatchQueue.main.asyncAfter (deadline: .now() + 2.0) {

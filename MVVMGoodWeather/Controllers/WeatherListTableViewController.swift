@@ -36,19 +36,17 @@ class WeatherListTableViewController: UITableViewController , AddWeatherDelegate
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "AddWeatherCityViewController" {
+        if segue.identifier == "AddCityWeatherViewController" {
             prepareSegueForAddWeatherCityViewController(segue: segue)
         }
         
         else if segue.identifier == "SettingsTableViewController" {
-            
             prepareSegueForSettingsTableViewController(segue: segue)
         }
         
         else if segue.identifier == "WeatherDetailsViewController" {
             prepareSegueForWeatherDetailsViewController(segue: segue)
         }
-        
     }
     
     private func prepareSegueForWeatherDetailsViewController(segue: UIStoryboardSegue) {
@@ -57,10 +55,8 @@ class WeatherListTableViewController: UITableViewController , AddWeatherDelegate
         let indexPath = self.tableView.indexPathForSelectedRow else {
             return
         }
-        
         let weatherVM = self.weatherListViewModel.modelAt(index: indexPath.row)
         weatherDetailsVC.weatherViewModel = weatherVM
-        
     }
     
     private func prepareSegueForSettingsTableViewController(segue : UIStoryboardSegue) {
@@ -84,11 +80,11 @@ class WeatherListTableViewController: UITableViewController , AddWeatherDelegate
         guard  let addWeatherCityVC = nav.viewControllers.first as?  AddWeatherCityViewController else {
             fatalError("AddWeatherCityController not found")
         }
-         addWeatherCityVC.delegate = self
+        //this tells the addweathercityVC that i am listening to you
+        addWeatherCityVC.delegate = self
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as! WeatherCell
         let weatherVM = self.weatherListViewModel.modelAt(index: indexPath.row)
         cell.configure(vm: weatherVM)
@@ -97,10 +93,8 @@ class WeatherListTableViewController: UITableViewController , AddWeatherDelegate
 }
 
 extension WeatherListTableViewController : SettingsDelegate {
-    
     func settingsDone(vm: SettingsViewModel) {
         self.weatherListViewModel.updateUnit(to: vm.selectedUnit)
         self.tableView.reloadData()
     }
-    
 }
