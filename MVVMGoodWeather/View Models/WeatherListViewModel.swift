@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 struct WeatherListViewModel {
     
-    private var weatherViewModels = [WeatherViewModel]()
+    private(set) var weatherViewModels = [WeatherViewModel]()
     
     mutating func addWeatherViewModel(vm: WeatherViewModel) {
         self.weatherViewModels.append(vm)
@@ -87,7 +88,7 @@ class Dynamic <T>: Decodable where T: Decodable {
 
 
     
-struct WeatherViewModel : Decodable {
+struct WeatherViewModel : Decodable   {
     
     let name: Dynamic<String>
     var currentTemperature: TemperatureViewModel

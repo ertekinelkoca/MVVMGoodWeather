@@ -12,9 +12,16 @@ class WeatherListTableViewController: UITableViewController , AddWeatherDelegate
 
     private var weatherListViewModel = WeatherListViewModel()
     
+    //private var datasource: TableViewDataSource<WeatherCell,WeatherCell>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+       /* self.datasource = TableViewDataSource(cellIdentifier: "WeatherCell", items: self.weatherListViewModel.weatherViewModels) { vc1 , vc2 in
+             
+            
+        }*/
     }
     
     func addWeatherDidSave(vm: WeatherViewModel) {
