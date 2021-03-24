@@ -60,8 +60,8 @@ struct WeatherListViewModel {
 //Type Eraser
 class Dynamic <T>: Decodable where T: Decodable {
     
-    typealias Listener = (T) -> () // Type T returns nothing , this just a closure If dynamic string listener will be string
-    var listener: Listener? // -> T and create variable using dynamic type so is typealias
+    //typealias Listener = (T) -> () // Type T returns nothing , this just a closure If dynamic string listener will be string
+    var listener:((T) -> ())? //Listener? // -> T and create variable using dynamic type so is typealias
     
     // To save actual value of the name below
     // To pass the type
@@ -71,7 +71,7 @@ class Dynamic <T>: Decodable where T: Decodable {
         }
     }
     
-    func bind(listener: @escaping Listener) {
+    func bind(listener: ((T) -> ())?) {
         self.listener = listener
         self.listener?(self.value)
     }

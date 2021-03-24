@@ -11,6 +11,7 @@
 		741885C8257D3B27008FC7FB /* WeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741885C7257D3B27008FC7FB /* WeatherListViewModel.swift */; };
 		741885D1257D8055008FC7FB /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741885D0257D8055008FC7FB /* Double+Extensions.swift */; };
 		741885DA257D8B70008FC7FB /* gear-icon-vector-19615366.png in Resources */ = {isa = PBXBuildFile; fileRef = 741885D9257D8B70008FC7FB /* gear-icon-vector-19615366.png */; };
+		741B094B260BF6DF002A6545 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B094A260BF6DF002A6545 /* test.swift */; };
 		744A83642582D88A00C47099 /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A83632582D88A00C47099 /* WeatherDetailsViewController.swift */; };
 		745E084225CF305C00729093 /* TableViewDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E084125CF305C00729093 /* TableViewDataSources.swift */; };
 		74763A0825D0346900673AEF /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74763A0725D0346900673AEF /* SettingsViewModelTests.swift */; };
@@ -53,6 +54,7 @@
 		741885C7257D3B27008FC7FB /* WeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModel.swift; sourceTree = "<group>"; };
 		741885D0257D8055008FC7FB /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		741885D9257D8B70008FC7FB /* gear-icon-vector-19615366.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gear-icon-vector-19615366.png"; path = "../../../../Downloads/gear-icon-vector-19615366.png"; sourceTree = "<group>"; };
+		741B094A260BF6DF002A6545 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		744A83632582D88A00C47099 /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
 		745E084125CF305C00729093 /* TableViewDataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSources.swift; sourceTree = "<group>"; };
 		74763A0725D0346900673AEF /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				741885D9257D8B70008FC7FB /* gear-icon-vector-19615366.png */,
 				74DAC4FE257BA074001B7532 /* LaunchScreen.storyboard */,
 				74DAC501257BA074001B7532 /* Info.plist */,
+				741B094A260BF6DF002A6545 /* test.swift */,
 			);
 			path = MVVMGoodWeather;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				745E084225CF305C00729093 /* TableViewDataSources.swift in Sources */,
 				74A090BE257BBBEB007C1D8B /* AddWeatherCityViewController.swift in Sources */,
 				74DAC4F6257BA073001B7532 /* SceneDelegate.swift in Sources */,
+				741B094B260BF6DF002A6545 /* test.swift in Sources */,
 				749FAA0E257ED41B00C89A91 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

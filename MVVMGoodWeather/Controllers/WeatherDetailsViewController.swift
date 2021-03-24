@@ -27,7 +27,9 @@ class WeatherDetailsViewController : UIViewController {
     private func setupVMBindings() {
         
         if let weatherVM = self.weatherViewModel {
-            weatherVM.name.bind { self.cityNameLabel.text = $0}
+            weatherVM.name.bind {
+                print($0)
+                self.cityNameLabel.text = $0}
             weatherVM.currentTemperature.temperature.bind{ self.currentTemperatureLabel.text = $0.formatAsDegree}
         }
         
